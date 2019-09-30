@@ -160,12 +160,11 @@
   height: 50px;
   overflow: hidden;
   border-radius: 50px;
+  background: #4390EF;
 }
 
 .container-items > div.item-city .container-image > div > img {
   width: 100%;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .container-items > div.item-city .container-text {

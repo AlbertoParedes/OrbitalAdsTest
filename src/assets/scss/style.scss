@@ -147,9 +147,9 @@
         height: 50px;
         overflow: hidden;
         border-radius: 50px;
+        background: $colorCheckBoxSelected;
         >img{
           width: 100%;
-          transform: scale(1.1);
         }
 
       }
