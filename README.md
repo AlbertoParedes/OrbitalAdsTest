@@ -12,4 +12,4 @@ Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 ### `npm run build`
 
 Run this command if you want to deploy this app in a real server.<br>
-I already did this, so you can visit [https://agitated-carson-fe9093.netlify.com/](https://agitated-carson-fe9093.netlify.com/) to see the app without installing anything 😊 🎊 🎉
+I already did this, so you can visit  to see the app without installing anything 😊 🎊 🎉
