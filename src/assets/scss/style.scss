@@ -1,0 +1,237 @@
+@import './variables';
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $colorTrackScrollbar;
+  border-radius: $radiusScrollBar;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $colorThumbScrollbar; 
+  border-radius: $radiusScrollBar;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $colorThumbScrollbarHover; 
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+#root{
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 440px) {
+    padding: 10px;
+  }
+}
+
+.container-table{
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  border: 1px solid $grayColor;
+  border-radius: 4px;
+
+  .title-bar{
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $colorTitle;
+    letter-spacing: 0.5px;
+  }
+
+  .data-table{
+
+    display: flex;
+    min-height: $heightPanelLeft ;
+    flex-wrap: wrap;
+
+    > div {
+      &:nth-child(1), &:nth-child(2){
+        min-width: 290px;
+        flex: 1;
+        width: 100%;
+        height: auto;
+        border-top: 1px solid $grayColor;
+      }
+      &:nth-child(2){
+        border-left: 1px solid $grayColor;
+        
+      }
+    }
+
+    @media (max-width: 641px) {
+      > div {
+        &:nth-child(2){
+          border-left: 0px solid $grayColor;
+          
+        }
+      }
+    }
+    
+  }
+
+}
+
+.container-search-city{
+  border-bottom: 1px solid $grayColor;
+  width: 100%;
+  padding: 10px 15px;
+  position: relative;
+
+  input{
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $colorInputSearch;
+    padding: 5px 5px 5px 30px;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+
+    &:focus {
+      border-bottom: 1px solid $colorInputSearchActive;
+    }
+    &:focus ~ svg > path{
+      fill: $colorInputSearchActive;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    path{
+      fill: $colorInputSearch;
+    }
+  }
+}
+
+.container-items{
+  height: $heightPanelLeft;
+  overflow: auto;
+  overflow-x: hidden;
+
+  > div.item-city {
+    display: flex;
+    padding: 12px 12px 12px 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: $colorItemCityHover;
+    }
+
+    .container-image{
+      display: flex;
+      justify-content: center;
+      
+      margin-right: 20px;
+      >div{
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 50px;
+        >img{
+          width: 100%;
+          transform: scale(1.1);
+        }
+
+      }
+
+    }
+
+    .container-text{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      > div {
+        &:last-child{
+          color: $colorChiniseName;
+          font-size: 13px;
+          padding-top: 5px;
+        }
+      }
+
+    }
+
+    .container-delete-item{
+      padding-right: 10px;
+    }
+
+  }
+
+}
+.rigth-panel-items{
+  height: $heightPanelRight;
+}
+.container-check-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.check-box, .check-box-checked{
+  cursor: pointer;
+  >path{
+    fill:$colorCheckBox;
+  }
+}
+.check-box-checked{
+  >path{
+    fill:$colorCheckBoxSelected;
+  }
+}
+
+.container-left-info-items{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $grayColor;
+  padding: 12px 12px 12px 22px;
+}
+
+.container-rigth-info-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $grayColor;
+  padding: 12px 22px;
+  height: 48px;
+  font-size: 14px;
+  color: $colorInfoTextRight;
+
+  >div{
+    &:last-child{
+      text-transform: uppercase;
+      color: $colorClear;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+img, svg {
+  user-select: none;
+}

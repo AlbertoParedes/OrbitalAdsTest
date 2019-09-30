@@ -1,0 +1,20 @@
+
+
+declare module '*.svg' {
+  export const ReactComponent: React.SFC<React.SVGProps<SVGSVGElement>>;
+  const src: string;
+  export default src;
+}
+
+declare module "*.json" {
+  const value: any;
+  export default value;
+}
+
+declare module "*.png" {
+  const content: string;
+  export default content;
+}
+
+
+
